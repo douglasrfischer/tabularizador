@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{{ url_for('public_bp.upload') }}" method="POST" enctype="multipart/form-data">
+        <label for="arquivo">Selecione a planilha a ser tabularizada no campo de input abaixo.</label>
+        <br>
+        <input name="arquivo" type="file">
+
+        <br>
+        <input class="margem-10" type="submit" value="Tabularizar">
+    </form>
+{% endblock %}

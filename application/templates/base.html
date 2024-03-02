@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tabularizador</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+    <div class="center">
+        <h2>Tabularizador</h2>
+    </div>
+    
+    <hr>
+
+    {% with msg = get_flashed_messages() %}
+        {% if msg %}
+            <p class="msg">{{ msg }}</p>
+        {% endif %}
+    {% endwith %}
+
+    <div class="center margem-10">
+       {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
